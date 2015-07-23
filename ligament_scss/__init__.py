@@ -13,14 +13,14 @@ class Scss(Precompiler):
         ligament_precompiler_template
     """
 
-    inline_template_string = (
+    external_template_string = (
         "<link rel='stylesheet' type='text/css' href='%s'></link>")
 
     embed_template_string = "<style>%s</style>"
 
     default_kwargs = {
         "minify": True,
-        "inline": True,
+        "embed": True,
         "source_dir": "template/css",
         "target_dir": "build/css",
         "build_targets": ["*"],
@@ -33,6 +33,7 @@ class Scss(Precompiler):
         Precompiler.__init__(self, **calling_kwargs)
 
         self.compiler = scss.Scss({"compress": self.minify})
+        self.compiler_name = "scss"
 
         self.file_watch_targets = [
             os.path.join(self.input_directory, "*.scss"),
