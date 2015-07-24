@@ -1,6 +1,4 @@
 Scaa Compiler for ligament
 ==========================
 
-Compiles and concatenates scss, under ligament
-
-TODO write the docs
+Provides a [ligament](https://pypi.python.org/pypi/ligament) interface for pyScss
