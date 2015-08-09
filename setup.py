@@ -18,7 +18,7 @@ with open(path.join(here, 'DESCRIPTION.rst'), encoding='utf-8') as f:
 
 setup(
     name='ligament-scss',
-    version='0.0.3.dev',
+    version='0.0.4.dev',
     description='A scss build task for ligament',
     url='http://github.com/Adjective-Object/ligament_scss',
     author='Adjective-Object',
